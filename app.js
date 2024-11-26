@@ -41,7 +41,7 @@ fetch('https://in3.dev/inv/')
             ulKiekis.appendChild(liKiekis);
 
             const liKaina = document.createElement('li');
-            liKaina.innerText = item.price;
+            liKaina.innerText = item.price.toFixed(2);
             ulKaina.appendChild(liKaina);
 
             const liNuolaida = document.createElement('li');
@@ -69,11 +69,11 @@ fetch('https://in3.dev/inv/')
             ulViso.appendChild(liViso);
         });
         
+        tarpineSuma += data.shippingPrice;
         document.getElementById('transportoIslaidos').innerText = `${data.shippingPrice.toFixed(2)}€`;
         document.getElementById('tarpineSuma').innerText = `${tarpineSuma.toFixed(2)}€`;
         const pvm = tarpineSuma * 0.21;
         document.getElementById('pvm').innerText = `${pvm.toFixed(2)}€`;
-        const galutineSuma = tarpineSuma + pvm + data.shippingPrice;
-        document.getElementById('pvm').innerText = `${galutineSuma.toFixed(2)}€`;
-    })
-    .catch(error => console.error("Klaida gaunant duomenis iš API:", error));
+        const galutineSuma = tarpineSuma + pvm;
+        document.getElementById('galutineSuma').innerText = `${galutineSuma.toFixed(2)}€`;
+    });
