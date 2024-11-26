@@ -1,7 +1,7 @@
 fetch('https://in3.dev/inv/')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        // console.log(data);
         
         document.getElementById('saskaitaNr').innerText = data.number;
         document.getElementById('saskaitaData').innerText = data.date;
