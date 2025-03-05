@@ -1,1 +1,223 @@
-body{font-family:Arial,sans-serif;margin:0;padding:0;background-color:#f9f9f9;color:#333}.saskaitaContainer{display:flex;justify-content:center;flex-direction:column;align-items:center;max-width:800px;margin:20px auto;background:#fff;padding:20px;box-shadow:0 2px 5px rgba(0,0,0,.1);border-radius:8px}.saskaitaContainer .saskaitaHeader{text-align:center;margin-bottom:20px}.saskaitaContainer .saskaitaHeader h1{margin-bottom:10px;color:#444}.saskaitaContainer .saskaitaHeader p{margin:5px 0;font-size:.9em}.saskaitaContainer .saskaitaHeader p b{font-weight:bold}.saskaitaContainer .pirkejasPardavejasContainer{width:80%;display:flex;justify-content:space-between;margin-bottom:20px}.saskaitaContainer .pirkejasPardavejasContainer div{width:48%;display:flex;justify-content:center;align-items:center;flex-direction:column}.saskaitaContainer .pirkejasPardavejasContainer div h2{border-bottom:2px solid #ddd;text-align:center;width:90%;padding-bottom:5px;margin-bottom:10px;font-size:1.1em;color:#555}.saskaitaContainer .pirkejasPardavejasContainer div p{margin:5px 0;font-size:.9em}.saskaitaContainer .prekesListContainer{display:flex;justify-content:center;width:95%}.saskaitaContainer .prekesListContainer div{flex:1}.saskaitaContainer .prekesListContainer div:last-child{margin-right:0}.saskaitaContainer .prekesListContainer div h3{display:flex;justify-content:center;align-items:center;height:40px;font-size:1em;border-bottom:2px solid #ddd;margin-bottom:10px;color:#555;padding-bottom:5px}.saskaitaContainer .prekesListContainer div ul{list-style:none;padding:0}.saskaitaContainer .prekesListContainer div ul li{display:flex;justify-content:center;align-items:center;padding:5px;background-color:#f2f2f2;font-size:.9em;height:50px;border-bottom:solid 1px gray}.saskaitaContainer .prekesListContainer .prekes{flex:1.5}.saskaitaContainer .prekesListContainer .prekes li{text-align:center}.saskaitaContainer .sumosContainer{display:flex;flex-direction:column;align-items:flex-end;width:80%}.saskaitaContainer .sumosContainer p{margin:10px 0;font-size:1em}.saskaitaContainer .sumosContainer p b{font-weight:bold}.saskaitaContainer h3{text-align:center;margin-top:20px;color:#666}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.saskaitaContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    position: relative;
+}
+
+.printBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.printBtn:hover {
+    background-color: #2980b9;
+}
+
+@media print {
+    .printBtn {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+    }
+    
+    .saskaitaContainer {
+        box-shadow: none;
+        margin: 0;
+        padding: 15px;
+        max-width: 100%;
+    }
+}
+
+.saskaitaContainer .saskaitaHeader {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+}
+
+.saskaitaContainer .saskaitaHeader h1 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.saskaitaContainer .saskaitaHeader p {
+    margin: 8px 0;
+    font-size: 0.95em;
+}
+
+.saskaitaContainer .saskaitaHeader p b {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.saskaitaContainer .pirkejasPardavejasContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.saskaitaContainer .pirkejasPardavejasContainer div {
+    width: 48%;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+}
+
+.saskaitaContainer .pirkejasPardavejasContainer div h2 {
+    border-bottom: 2px solid #3498db;
+    text-align: left;
+    width: 100%;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.saskaitaContainer .pirkejasPardavejasContainer div p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.saskaitaContainer .prekesListContainer {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.saskaitaContainer .prekesListContainer div {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.saskaitaContainer .prekesListContainer div h3 {
+    height: 40px;
+    font-size: 0.9em;
+    background-color: #3498db;
+    color: white;
+    margin: 0;
+    padding: 10px 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saskaitaContainer .prekesListContainer div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.saskaitaContainer .prekesListContainer div ul li {
+    padding: 10px 5px;
+    font-size: 0.9em;
+    min-height: 40px;
+    border-bottom: solid 1px #eaeaea;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    height: 100%;
+    transition: height 0.3s ease;
+}
+
+.saskaitaContainer .prekesListContainer div ul li:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.saskaitaContainer .prekesListContainer div ul li:last-child {
+    border-bottom: none;
+}
+
+.saskaitaContainer .prekesListContainer .prekes {
+    width: 35%;
+}
+
+.saskaitaContainer .prekesListContainer .prekiuKiekis,
+.saskaitaContainer .prekesListContainer .kainaVnt,
+.saskaitaContainer .prekesListContainer .nuolaida,
+.saskaitaContainer .prekesListContainer .kainaViso {
+    width: 16.25%;
+}
+
+.saskaitaContainer .prekesListContainer .prekes li {
+    text-align: left;
+    padding-left: 10px;
+    justify-content: flex-start;
+}
+
+.saskaitaContainer .sumosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eaeaea;
+}
+
+.saskaitaContainer .sumosContainer p {
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.saskaitaContainer .sumosContainer p:last-child {
+    font-size: 1.2em;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+    border-top: 2px solid #3498db;
+    padding-top: 10px;
+}
+
+.saskaitaContainer .sumosContainer p b {
+    font-weight: bold;
+    color: #34495e;
+    margin-right: 10px;
+}
+
+.saskaitaContainer h3 {
+    text-align: center;
+    margin-top: 30px;
+    color: #3498db;
+    font-style: italic;
+}
